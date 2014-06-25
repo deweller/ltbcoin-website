@@ -143,7 +143,7 @@
                 $target = $('#' + linkHref);
 
                 if($target.length) {
-                    topPos = $target.offset().top - 64;
+                    topPos = $target.offset().top;
                     self.sections[linkHref] = Math.round(topPos);
                 }
             });
@@ -223,7 +223,7 @@
         },
 
         scrollTo: function(target, callback) {
-            var offset = $(target).offset().top - 64;
+            var offset = $(target).offset().top;
 
             $('html, body').animate({
                 scrollTop: offset
