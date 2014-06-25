@@ -20,10 +20,29 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        
+        <div class="fixed">
+            <nav class="top-bar" data-topbar id="main-nav">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#top">LTBcoin</a></h1>
+                    </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                </ul>
+                <section class="top-bar-section">
+                    <!-- Left Nav Section -->
+                    <ul class="left">
+                        <li><a href="#philosophy">Philosophy</a></li>
+                        <li><a href="#disbursement">Disbursement</a></li>
+                        <li><a href="#supply">Supply</a></li>
+                        <li><a href="#demand">Demand</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+
 
         <header>
-            <div class="row">
+            <div class="row" id="top">
                 <div class="columns text-center">
                     <img class="right" src="img/ltbcoin-200x200.png" alt="LTBcoin">
                     <h1>LTBcoin</h1>
@@ -34,10 +53,10 @@
 
         <div class="main-body">
 
-            <div class="main-section">
+            <div class="main-section" id="philosophy">
                 <div class="row">
-                    <div class="small-centered medium-10 columns">
-                        <h3>The Philosophy of LTB Coin</h3>
+                    <div class="small-centered medium-11 columns">
+                        <h3>The Philosophy of LTBcoin</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
                     </div>
@@ -46,13 +65,60 @@
 
 
 
-            <div class="main-section">
+            <div class="main-section" id="disbursement">
                 <div class="row">
-                    <div class="small-centered medium-10 columns">
-                        <h3>Initial Disbursement</h3>
-                        <div class="graph">
-                            <img src="img/initial-disbursement.png" alt="Initial Disbursement">
+                    <div class="small-centered medium-11 columns">
+                        <h3>Disbursement</h3>
+
+                        <div class="row">
+                            <div class="medium-6 columns">
+                                <h4>Initial Disbursement</h4>
+                                <img src="img/initial-disbursement.png" alt="Initial Disbursement">                                
+                            </div>
+                            <div class="medium-6 columns">
+                                <h4>Ongoing Disbursements</h4>
+                                <img src="img/weekly-issuance.png" alt="Ongoing Disbursement">
+                            </div>
                         </div>
+                        <div class="spacer3"></div>
+
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main-section" id="supply">
+                <div class="row">
+                    <div class="small-centered medium-11 columns">
+                        <h3>Supply</h3>
+                        <div class="row">
+                            <div class="medium-6 columns">
+                                <img src="img/money-supply-chart.png" alt="Money Supply">
+                            </div>
+                            <div class="medium-6 columns">
+                                <img src="img/weekly-issuance-chart.png" alt="Weekly Issuance">
+                            </div>
+                        </div>
+                        <div class="spacer3"></div>
+
+                            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section" id="demand">
+                <div class="row">
+                    <div class="small-centered medium-11 columns">
+                        <h3>Demand</h3>
+
+                        <h5>What do I use it for?</h5>
+                            
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos, earum rem necessitatibus. Tempora hic vero magnam rem praesentium dolorum, deserunt beatae porro, natus distinctio, error similique cumque excepturi sequi.</p>
                     </div>
@@ -67,9 +133,21 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/foundation.min.js"></script>
+        <script src="js/foundation/foundation.topbar.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script>$(document).foundation();</script>
+        <script>
+        $('#main-nav').onePageNav({
+            currentClass: 'current',
+            changeHash: false,
+            scrollSpeed: 750,
+            scrollThreshold: 1,
+            filter: '',
+            easing: 'swing'
+        });
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -80,4 +158,4 @@
         ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
     </body>
-</html>
+    </html>

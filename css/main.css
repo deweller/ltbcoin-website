@@ -26,9 +26,6 @@ header h1 {
 .main-body {
   margin-bottom: 92px;
 }
-.main-section {
-  margin-top: 84px;
-}
 .main-section p {
   font-weight: 300;
   font-size: 1.1rem;
@@ -39,7 +36,23 @@ header h1 {
   text-align: center;
   margin-bottom: 24px;
 }
+.main-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
 .graph {
   margin-bottom: 20px;
   text-align: center;
+}
+.spacer1 {
+  height: 16px;
+}
+.spacer2 {
+  height: 32px;
+}
+.spacer3 {
+  height: 48px;
+}
+.spacer4 {
+  height: 64px;
 }
