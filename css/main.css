@@ -44,6 +44,25 @@ header h1 {
   margin-bottom: 20px;
   text-align: center;
 }
+.disbursement-table {
+  font-size: 0.9rem;
+}
+footer {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  background-color: #222;
+  font-weight: 200;
+}
+footer * {
+  color: white;
+}
+footer a {
+  font-size: 0.9rem;
+  color: white;
+}
+footer a:hover {
+  color: #ccc !important;
+}
 .spacer1 {
   height: 16px;
 }
